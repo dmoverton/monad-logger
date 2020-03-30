@@ -2,10 +2,10 @@ name:                monad-logger
 version:             1.0.0.0
 synopsis:            Structured logging abstractions
 description:         Please see README.md
-homepage:            https://github.com/seek-oss/monad-logger#readme
+homepage:            https://github.com/tmortiboy/monad-logger#readme
 author:              Tom Mortiboy
 maintainer:          Tom Mortiboy
-copyright:           2020 seek-oss
+copyright:           2020 seek-oss, 2020 monad-logger contributors
 category:            Data, Logging
 build-type:          Simple
 cabal-version:       >=1.10
@@ -92,4 +92,4 @@ test-suite monad-logger-tests
 
 source-repository head
   type:     git
-  location: https://github.com/seek-oss/monad-logger
+  location: https://github.com/tmortiboy/monad-logger
