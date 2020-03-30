@@ -1,0 +1,95 @@
+name:                monad-logger
+version:             1.0.0.0
+synopsis:            Structured logging abstractions
+description:         Please see README.md
+homepage:            https://github.com/seek-oss/monad-logger#readme
+author:              Tom Mortiboy
+maintainer:          Tom Mortiboy
+copyright:           2020 seek-oss
+category:            Data, Logging
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Control.Exception.Censor
+                     , Control.Monad.FastLogger
+                     , Control.Monad.Logger
+                     , Control.Monad.Logger.Mock
+                     , Control.Monad.Logger.Types
+  ghc-options:         -Wall
+  build-depends:       base >= 4.7 && < 5
+                     , aeson
+                     , amazonka-core
+                     , bytestring
+                     , conduit
+                     , containers
+                     , exceptions
+                     , fast-logger
+                     , free
+                     , hspec
+                     , http-client
+                     , http-types
+                     , lens
+                     , lens-regex
+                     , mmorph
+                     , monad-control
+                     , mtl
+                     , primitive
+                     , regex-base
+                     , resourcet
+                     , retry
+                     , regex-tdfa
+                     , regex-tdfa-text
+                     , safe-exceptions
+                     , servant-client
+                     , text
+                     , text-show
+                     , thyme
+                     , transformers
+                     , transformers-base
+                     , unliftio-core
+                     , unordered-containers
+                     , vector
+                     , vector-space
+  default-language:    Haskell2010
+  default-extensions:  FlexibleContexts
+                     , LambdaCase
+                     , MultiParamTypeClasses
+                     , OverloadedStrings
+                     , RecordWildCards
+                     , ScopedTypeVariables
+                     , TupleSections
+
+test-suite monad-logger-tests
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  other-modules:       Control.Exception.CensorSpec
+                     , Control.Monad.Logger.TypesSpec
+                     , Control.Monad.LoggerSpec
+  build-depends:       base
+                     , exceptions
+                     , monad-logger
+                     , aeson
+                     , hspec
+                     , mtl
+                     , old-locale
+                     , quickcheck-instances
+                     , retry
+                     , safe-exceptions
+                     , text
+                     , unordered-containers
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+  default-extensions:  FlexibleContexts
+                     , LambdaCase
+                     , MultiParamTypeClasses
+                     , OverloadedStrings
+                     , RecordWildCards
+                     , ScopedTypeVariables
+                     , TupleSections
+
+source-repository head
+  type:     git
+  location: https://github.com/seek-oss/monad-logger
